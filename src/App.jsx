@@ -1,11 +1,25 @@
-
-function App() {
+import { BrowserRouter, Routes,Route } from "react-router-dom"
+import {  Body,Login} from "./components"
  
+function App() {
 
   return (
-    <>
-     <h1>Devtinder ui</h1>
-    </>
+   
+  <>
+    <BrowserRouter basename="/">
+      <Routes>
+        <Route path="/" element={<Body/>}>
+          <Route path="/login" element={<Login/>}/>
+        
+        </Route>
+      </Routes>
+
+    </BrowserRouter>
+
+    
+
+  </>
+     
   )
 }
 
