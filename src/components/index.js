@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Feed from "./Feed";
 import Signup from "./Signup";
 import Profile from "./Profile";
-
+import Card from "./Card";
 export{
     Navbar,
     Body,
@@ -13,5 +13,6 @@ export{
     Footer,
     Feed,
     Signup,
-    Profile
+    Profile,
+    Card,
 }

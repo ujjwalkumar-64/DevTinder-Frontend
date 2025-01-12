@@ -13,8 +13,9 @@ const Body = () => {
  const user = useSelector((state)=>state.user);
 
   const fetchUser = async()=>{
+    if(user) return
     try {
-      if(user) return
+     
       const res= await axios.get(BaseUrl+"/profile/view",{withCredentials:true});
       dispatch(addUser(res.data));
      
