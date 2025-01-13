@@ -31,11 +31,14 @@ useEffect(()=>{
 
 },[]);
 
+if (!feed) return;
+
+if (feed.length <= 0)
+  return <h1 className="flex justify-center my-10">No new users founds!</h1>;
+
   return (
    feed && (<div className='flex justify-center my-10'>
-          {feed.map((user, index) => (
-        <Card key={index} user={user} />
-      ))}
+          <Card user={feed[0]} />
     </div>)
   )
 }

@@ -8,7 +8,6 @@ import { addConnection } from '../utils/connectionSlice'
 const Connections = () => {
 
   const connections= useSelector((store)=>store.connection);
-  console.log(connections)
   
   const dispatch= useDispatch();
   const fetchConnections = async()=>{
@@ -32,19 +31,6 @@ const Connections = () => {
   if (connections.length === 0) return <h1 className='flex justify-center my-10'> No Connections Found</h1>;
   
   return (
-    // <div >
-    //   <div className='text-center py-4 '>
-    //     <h1 className='text-2xl text-white'>Connections</h1>
-    //   </div>
-
-    //  <div className='flex justify-center ' >
-    //  {connections?.map((connection,index)=>
-    //    ( <Card key={index} user={connection}/>)
-    //    )}
-
-    //  </div>
-    
-    // </div>
     <div className="text-center my-10">
       <h1 className="text-bold text-white text-3xl">Connections</h1>
 
