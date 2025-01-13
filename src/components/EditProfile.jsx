@@ -19,7 +19,12 @@ const EditProfile = ({user}) => {
 
     const dispatch = useDispatch();
     
-
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        const skillArray = value.split(",").map((skill) => skill.trim());
+        setSkills(skillArray);
+      };
+    
 
     const handleUpdate= async()=>{
         setError("");
@@ -123,10 +128,10 @@ const EditProfile = ({user}) => {
                         <span className="label-text">Skills</span>
                     </div>
                     <input type="text" 
-                        value={skills} 
-                        placeholder="Type here" 
+                        value={skills?.join(", ")} 
+                        placeholder="Type skills separated by commas" 
                         className="input input-bordered input-accent w-full max-w-xs"
-                        onChange={(e)=> setSkills(e.target.value)}
+                        onChange={handleInputChange}
                         />
                 </label>
 
