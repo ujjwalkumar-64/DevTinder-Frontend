@@ -29,25 +29,25 @@ const Navbar = () => {
     {user && <div className="flex-none gap-2">
         Welcome, {user.firstName}
         <div className="dropdown dropdown-end mx-5 flex">
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img
-              alt="user photo"
-              src={user?.photoUrl} />
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
+              <img
+                alt="user photo"
+                src={user?.photoUrl} />
+            </div>
           </div>
-        </div>
-        <ul
-          tabIndex={0}
-          className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-12 w-52 p-2 shadow">
-          <li>
-            <Link to="/profile" className="justify-between" >
-              Profile
-              <span className="badge">New</span>
-            </Link>
-          </li>
-          <li><Link to="/">Settings</Link></li>
-          <li><a onClick={handleLogout}>Logout</a></li>
-        </ul>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-12 w-52 p-2 shadow">
+            <li>
+              <Link to="/profile" className="justify-between" >
+                Profile
+                <span className="badge">New</span>
+              </Link>
+            </li>
+            <li><Link to="/">Settings</Link></li>
+            <li><a onClick={handleLogout}>Logout</a></li>
+          </ul>
       </div>
     </div>}
   </div>
