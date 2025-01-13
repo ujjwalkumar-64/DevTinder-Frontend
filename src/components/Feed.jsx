@@ -33,7 +33,9 @@ useEffect(()=>{
 
   return (
    feed && (<div className='flex justify-center my-10'>
-         <Card user={feed[0]}/>
+          {feed.map((user, index) => (
+        <Card key={index} user={user} />
+      ))}
     </div>)
   )
 }

@@ -7,6 +7,8 @@ import Signup from "./Signup";
 import Profile from "./Profile";
 import Card from "./Card";
 import EditProfile from "./EditProfile";
+import Connections from "./Connections";
+import Requests from "./Requests";
 export{
     Navbar,
     Body,
@@ -16,5 +18,7 @@ export{
     Signup,
     Profile,
     Card,
-    EditProfile
+    EditProfile,
+    Connections,
+    Requests
 }
