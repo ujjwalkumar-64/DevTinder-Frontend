@@ -6,6 +6,7 @@ import Feed from "./Feed";
 import Signup from "./Signup";
 import Profile from "./Profile";
 import Card from "./Card";
+import EditProfile from "./EditProfile";
 export{
     Navbar,
     Body,
@@ -15,4 +16,5 @@ export{
     Signup,
     Profile,
     Card,
+    EditProfile
 }

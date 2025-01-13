@@ -10,9 +10,10 @@ const Navbar = () => {
   const dispatch= useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state)=>state.user);
+
   const handleLogout = async()=>{
     try {
-      axios.post(BaseUrl+"/logout",{withCredentials:true});
+      axios.post(BaseUrl+"/logout",{},{withCredentials:true});
       dispatch(removeUser());
       return navigate("/login")
       
