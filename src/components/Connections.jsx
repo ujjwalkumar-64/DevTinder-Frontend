@@ -25,14 +25,19 @@ const Connections = () => {
     fetchConnections();
   }, []);
 
-  if (!connections) return;
+  if (!connections) return <h1 className="flex justify-center items-center my-10 text-lg text-gray-600">Loading...</h1>;
 
-  if (connections.length === 0) return <h1 className='flex justify-center my-10'> No Connections Found</h1>;
+  if (connections.length === 0)
+    return (
+      <h1 className="flex justify-center items-center my-10 text-lg text-gray-600">
+        No Connections Found
+      </h1>
+    );
   
   return (
-    <div className="text-center my-10">
-      <h1 className="text-bold text-white text-3xl">Connections</h1>
-
+    <div className="text-center my-10 px-4">
+      <h1 className="font-bold text-white text-3xl  mb-6">Connections</h1>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">  
       {connections.map((connection) => {
         const { _id, firstName, lastName, photoUrl, age, gender, about } =
           connection;
@@ -40,21 +45,21 @@ const Connections = () => {
         return (
           <div
             key={_id}
-            className=" flex m-4 p-4 rounded-lg bg-base-300 w-1/2 mx-auto"
+            className=" flex items-center bg-base-300 shadow-md rounded-lg p-4 w-full sm:w-4/5 lg:w-3/4 mx-auto"
           >
-            <div>
+            <div className='flex-shrink-0'>
               <img
                 alt="photo"
                 className="w-20 h-20 rounded-full object-cover"
                 src={photoUrl}
               />
             </div>
-            <div className="text-left mx-4 ">
-              <h2 className="font-bold text-xl">
+            <div className="text-left mx-4 flex-1 ">
+              <h2 className="font-bold text-xl text-gray-200">
                 {firstName + " " + lastName}
               </h2>
-              {age && gender && <p>{age + ", " + gender}</p>}
-              <p>{about}</p>
+              {age && gender && <p className="text-gray-600" >{age + ", " + gender}</p>}
+              <p className="text-gray-700 mt-1">{about}</p>
               
 
             </div>
@@ -62,8 +67,9 @@ const Connections = () => {
         );
       })}
     </div>
+    </div>
   );
 };
 
 
-export default Connections
+export default Connections;

@@ -39,14 +39,14 @@ const Requests = () => {
     fetchRequests();
   },[])
 
-  if (!requests) return;
+  if (!requests) return <h1 className="flex justify-center items-center my-10 text-gray-600">Loading...</h1>;
 
-  if (requests.length === 0) return <h1 className='flex justify-center my-10'> No Connection Request Found</h1>;
+  if (requests.length === 0) return <h1 className="flex justify-center items-center my-10 text-gray-600"> No Connection Request Found</h1>;
   
   return (
-    <div className="text-center my-10">
-      <h1 className="text-bold text-white text-3xl">Connection Requests</h1>
-
+    <div className="text-center my-10 px-4">
+      <h1 className="font-bold text-white text-3xl mb-6">Connection Requests</h1>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {requests.map((request) => {
         const { _id, firstName, lastName, photoUrl, age, gender, about } =
           request.fromUserId;
@@ -54,25 +54,25 @@ const Requests = () => {
         return (
           <div
             key={_id}
-            className=" flex justify-between items-center m-4 p-4 rounded-lg bg-base-300  mx-auto"
+            className=" flex flex-col justify-between items-center bg-base-300 shadow-md rounded-lg p-4 w-full sm:w-4/5 lg:w-3/5 mx-auto my-6"
            >
-            <div>
+            <div className="flex-shrink-0 mb-4">
               <img
                 alt="photo"
-                className="w-20 h-20 rounded-full"
+                className="w-20 h-20 rounded-full object-cover"
                 src={photoUrl}
               />
             </div>
-            <div className="text-left mx-4 ">
-              <h2 className="font-bold text-xl">
+            <div className="text-center mb-4">
+              <h2 className="font-bold text-xl text-gray-250">
                 {firstName + " " + lastName}
               </h2>
-              {age && gender && <p>{age + ", " + gender}</p>}
-              <p>{about}</p>
+              {age && gender && <p className='text-gray-600' >{age + ", " + gender}</p>}
+              <p className='text-gray-700 mt-1'>{about}</p>
             </div>
-            <div>
+            <div className="flex justify-center ">
               <button
-                className="btn btn-primary mx-2"
+                className="btn btn-primary  mx-2"
                 onClick={() => reviewRequest("rejected", request._id)}
               >
                 Reject
@@ -87,6 +87,7 @@ const Requests = () => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };

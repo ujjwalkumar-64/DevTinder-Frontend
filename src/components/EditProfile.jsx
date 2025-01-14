@@ -55,48 +55,48 @@ const EditProfile = ({user}) => {
   return (
      <>
 
-    <div className='flex justify-center my-10'>
+    <div className='flex flex-wrap justify-center gap-10 my-10 px-4 sm:px-8'>
         <div className=' flex justify-center mx-10'>
-            <div className="card bg-base-300 w-96 shadow-xl">
+            <div className="card bg-base-300 w-full sm:w-96 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title justify-center">Edit Profile</h2>
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control w-full   my-2">
                         <div className="label">
                             <span className="label-text">First Name</span>
                         </div>
                         <input type="text" 
                             value={firstName} 
                             placeholder="Type here" 
-                            className="input input-bordered input-accent w-full max-w-xs"
+                            className="input input-bordered input-accent w-full  "
                             onChange={(e)=> setFirstName(e.target.value)}
                             />
                     </label>
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control w-full   my-2">
                         <div className="label">
                             <span className="label-text">Last Name</span>
                         </div>
                         <input type="text" 
                         value={lastName}
                         placeholder="Type here" 
-                        className="input input-bordered input-accent w-full max-w-xs" 
+                        className="input input-bordered input-accent w-full  " 
                         onChange={(e)=>setLastName(e.target.value)}/>
                     </label>
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control w-full   my-2">
                         <div className="label">
                             <span className="label-text">Age</span>
                         </div>
                         <input type="number" 
                         value={age}
                         placeholder="Type here" 
-                        className="input input-bordered input-accent w-full max-w-xs" 
+                        className="input input-bordered input-accent w-full  " 
                         onChange={(e)=>setAge(e.target.value)}/>
                     </label>
 
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control w-full   my-2">
                     <div className="label">
                         <span className="label-text">Gender</span>
                     </div>
-                    <select className="select select-accent w-full max-w-xs"
+                    <select className="select select-accent w-full  "
                     value={gender}
                     onChange={(e)=> setGender(e.target.value)}
                     >
@@ -107,14 +107,14 @@ const EditProfile = ({user}) => {
                 </select>
                 </label>
                 
-                <label className="form-control w-full max-w-xs my-2">
+                <label className="form-control w-full   my-2">
                     <div className="label">
                         <span className="label-text">Photo Url</span>
                     </div>
                     <input type="text" 
                         value={photoUrl} 
                         placeholder="Type here" 
-                        className="input input-bordered input-accent w-full max-w-xs"
+                        className="input input-bordered input-accent w-full  "
                         onChange={(e)=> setPhotoUrl(e.target.value)}
                     />
                         
@@ -123,19 +123,19 @@ const EditProfile = ({user}) => {
 
                 </label>
 
-                <label className="form-control w-full max-w-xs my-2">
+                <label className="form-control w-full   my-2">
                     <div className="label">
                         <span className="label-text">Skills</span>
                     </div>
                     <input type="text" 
                         value={skills?.join(", ")} 
                         placeholder="Type skills separated by commas" 
-                        className="input input-bordered input-accent w-full max-w-xs"
+                        className="input input-bordered input-accent w-full  "
                         onChange={handleInputChange}
                         />
                 </label>
 
-                <label className="form-control w-full max-w-xs my-2">
+                <label className="form-control w-full   my-2">
                     <div className="label">
                         <span className="label-text">About</span>
                     </div>
@@ -158,7 +158,7 @@ const EditProfile = ({user}) => {
        </div>
     </div>
 
-    { tost && (<div className="toast toast-top toast-center">
+    { tost && (<div className="toast toast-top toast-center mx-4">
         <div className="alert alert-info">
         <span>Profile update successfully.</span>
         </div>

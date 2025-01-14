@@ -55,14 +55,15 @@ const Login = () => {
 
   return (
     <div className='my-10 flex justify-center'>
-        <div className="card bg-base-300 w-96 shadow-xl">
+        <div className="card bg-base-300 sm:w-96 shadow-xl">
             <div className="card-body">
-                <h2 className="card-title justify-center">{isloggedIn?"Login Page":"Signup Page"}</h2>
+                <h2 className="card-title justify-center text-xl">{isloggedIn?"Login Page":"Signup Page"}</h2>
 
                 {
-                    !isloggedIn && <>
+                    !isloggedIn && 
+                    <>
 
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control    my-2">
                         <div className="label">
                             <span className="label-text">First Name</span>
                         </div>
@@ -73,7 +74,7 @@ const Login = () => {
                             onChange={(e)=> setFirstName(e.target.value)}
                             />
                     </label>
-                    <label className="form-control w-full max-w-xs my-2">
+                    <label className="form-control   my-2">
                         <div className="label">
                             <span className="label-text">Last Name</span>
                         </div>
@@ -88,7 +89,7 @@ const Login = () => {
                     </>
                 }
 
-                <label className="form-control w-full max-w-xs my-2">
+                <label className="form-control   my-2">
                     <div className="label">
                         <span className="label-text">Email</span>
                     </div>
@@ -99,7 +100,7 @@ const Login = () => {
                         onChange={(e)=> setEmail(e.target.value)}
                         />
                 </label>
-                <label className="form-control w-full max-w-xs my-2">
+                <label className="form-control   my-2">
                     <div className="label">
                         <span className="label-text">Password</span>
                     </div>
@@ -110,13 +111,13 @@ const Login = () => {
                     onChange={(e)=>setPassword(e.target.value)}/>
                 </label>
 
-                    <p className='text-red-800'>{error}</p>
+                    <p className='text-red-800 my-2 '>{error}</p>
                     <div className="card-actions justify-center m-2">
                         <button className="btn btn-accent" onClick={isloggedIn? handleLogin :  handleSignup}>Submit</button>
                     </div>
 
                     <p
-                        className="m-auto cursor-pointer py-2"
+                        className="text-center cursor-pointer py-2"
                         onClick={() => setIsLoggedIn((value) => !value)}
                     >
                         {isloggedIn

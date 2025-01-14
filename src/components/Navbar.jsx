@@ -23,12 +23,12 @@ const Navbar = () => {
   }
    
   return (
-    <div className="navbar bg-base-300">
+    <div className="navbar bg-base-300 flex flex-wrap md:flex-nowrap">
     <div className="flex-1">
       <Link to={user?"/":"/login"} className="btn btn-ghost text-xl">DevTinder</Link>
     </div>
-    {user && <div className="flex-none gap-2">
-        Welcome, {user.firstName}
+    {user && <div className="flex-none gap-2 mt-2 md:mt-0">
+      <span className="hidden md:inline">Welcome, {user.firstName}</span>
         <div className="dropdown dropdown-end mx-5 flex">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
