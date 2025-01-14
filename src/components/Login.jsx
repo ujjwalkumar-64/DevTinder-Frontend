@@ -10,7 +10,9 @@ const Login = () => {
     const [password,setPassword] = useState("")
     const [firstName,setFirstName]= useState("")
     const [lastName,setLastName]= useState("")
-    const [isloggedIn,setIsLoggedIn] = useState(true);
+
+    const isloggedIn = location.pathname === "/login";
+    
     const [error,setError]= useState("");
 
     const dispatch = useDispatch();
@@ -118,7 +120,7 @@ const Login = () => {
 
                     <p
                         className="text-center cursor-pointer py-2"
-                        onClick={() => setIsLoggedIn((value) => !value)}
+                        onClick={() => navigate(isloggedIn ? "/signup" : "/login")}
                     >
                         {isloggedIn
                         ? "New User? Signup Here"

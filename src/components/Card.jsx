@@ -26,19 +26,21 @@ const Card = ({user}) => {
   return (
     <div className="card bg-base-300 shadow-xl mx-auto my-5 max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md">
      
-        <figure className="p-5">
+        <figure className="p-5"  style={{ userSelect: "none" }}>
         <img
           src={photoUrl}
           alt="user photo" 
-          className="rounded-full object-cover h-32 w-32 mx-auto" />
+          className="rounded-full object-cover h-32 w-32 mx-auto"
+          style={{ userSelect: "none" }} />
       </figure>
             
       <div className="card-body flex flex-col items-center">
-        <h2 className="card-title text-lg sm:text-xl text-center">
+        <h2 className="card-title text-lg sm:text-xl text-center"
+         style={{ userSelect: "none" }}>
           {firstName + " "+ lastName}</h2>
-        { age && gender  && (<p className="text-sm sm:text-base text-gray-600">{gender + " " + age} </p>)}
-        <p className="text-center my-2 text-gray-700">{about} </p>
-        <p className="text-center my-2 text-sm text-gray-600">{skills?.join(", ")}</p>
+        { age && gender  && (<p className="text-sm sm:text-base text-gray-600"  style={{ userSelect: "none" }}>{gender + " " + age} </p>)}
+        <p className="text-center my-2 text-gray-700"  style={{ userSelect: "none" }}>{about} </p>
+        <p className="text-center my-2 text-sm text-gray-600"  style={{ userSelect: "none" }}>{skills?.join(", ")}</p>
 
           <div className="card-actions flex justify-around w-full mt-4">
             <button className="btn btn-accent w-5/12"

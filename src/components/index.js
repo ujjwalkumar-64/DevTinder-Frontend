@@ -8,6 +8,7 @@ import Card from "./Card";
 import EditProfile from "./EditProfile";
 import Connections from "./Connections";
 import Requests from "./Requests";
+import ResetPassword from "./ResetPassword";
 export{
     Navbar,
     Body,
@@ -18,5 +19,6 @@ export{
     Card,
     EditProfile,
     Connections,
-    Requests
+    Requests,
+    ResetPassword
 }
