@@ -3,10 +3,11 @@ import React, { useEffect } from 'react'
 import { BaseUrl } from '../utils/constant'
 import { useDispatch, useSelector } from 'react-redux'
 import { addConnection } from '../utils/connectionSlice'
+import { Link } from 'react-router-dom'
 
 const Connections = () => {
 
-  const connections= useSelector((store)=>store.connection);
+  const connections= useSelector((store)=>store.connection || []);
   
   const dispatch= useDispatch();
   const fetchConnections = async()=>{
@@ -14,7 +15,7 @@ const Connections = () => {
           const res= await axios.get(BaseUrl + "/user/connections",{
             withCredentials:true
           })
-          dispatch(addConnection(res.data.data))
+          dispatch(addConnection(res.data.data || []))
 
       } catch (error) {
           console.error(error)
@@ -25,7 +26,13 @@ const Connections = () => {
     fetchConnections();
   }, []);
 
-  if (!connections) return <h1 className="flex justify-center items-center my-10 text-lg text-gray-600">Loading...</h1>;
+  if (connections === null) 
+    return (
+      <h1 className="flex justify-center items-center my-10 text-lg text-gray-600">
+        Loading...
+      </h1>
+    );
+
 
   if (connections.length === 0)
     return (
@@ -64,6 +71,7 @@ const Connections = () => {
               
 
             </div>
+            <Link to={"/chat/"+ _id}><button className='btn btn-secondary'>Chat</button></Link>
           </div>
         );
       })}
