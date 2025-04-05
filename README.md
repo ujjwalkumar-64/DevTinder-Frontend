@@ -66,6 +66,7 @@ This frontend connects to the DevTinder backend:
 👉 [DevTinder Backend Repository](https://github.com/ujjwalkumar-64/DevTinder-Backend)
 
 ```
+```
 ## 🧠 Future Improvements
 Advanced filters for developer search
 
