@@ -45,7 +45,9 @@ Copy
 Edit
 VITE_API_URL=http://localhost:5000/api
 VITE_RAZORPAY_KEY=your_razorpay_key
-📂 Project Structure
+
+```
+## 📂 Project Structure
 pages/ – Screens like Feed, Chat, Subscription, etc.
 
 components/ – Reusable UI components
@@ -56,19 +58,23 @@ services/ – Axios API methods
 
 utils/ – Razorpay integration logic
 
-🔗 Backend Reference
-This frontend connects to the DevTinder backend:
+```
+```
+## 🔗 Backend Reference
+This frontend connects to the DevTinder backend: 
 
-👉 DevTinder Backend Repository
-
-🧠 Future Improvements
+👉 [DevTinder Backend Repository](https://github.com/ujjwalkumar-64/DevTinder-Backend)
+```
+```
+## 🧠 Future Improvements
 Advanced filters for developer search
 
 User status indicators (online/offline)
 
 Chat notifications
-
-🤝 Contributing
+```
+```
+## 🤝 Contributing
 Fork the repo
 
 Create a new branch: git checkout -b feature/YourFeature
@@ -78,7 +84,7 @@ Make your changes and commit: git commit -m 'Add your feature'
 Push to the branch: git push origin feature/YourFeature
 
 Open a Pull Request
-
+```
 ## 📄 License
 [MIT](./LICENSE)
 ```
