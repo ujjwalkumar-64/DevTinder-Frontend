@@ -122,7 +122,9 @@ const Login = () => {
                                 onClick={() => {
                                     setEmail("dev@gmail.com");
                                     setPassword("Rgipt@123");
-                                    handleLogin();
+                                    setTimeout(() => {
+                                        handleLogin();
+                                    }, 0);
                                 }}
                             >
                                 Guest Login
