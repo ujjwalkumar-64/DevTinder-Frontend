@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'; 
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
@@ -10,6 +10,7 @@ const Login = () => {
     const [password,setPassword] = useState("")
     const [firstName,setFirstName]= useState("")
     const [lastName,setLastName]= useState("")
+    const [guestLoginTriggered, setGuestLoginTriggered] = useState(false);
 
     const isloggedIn = location.pathname === "/login";
     
@@ -17,6 +18,14 @@ const Login = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (guestLoginTriggered) {
+            handleLogin();
+            setGuestLoginTriggered(false); // Reset the trigger
+        }
+    }, [guestLoginTriggered, email, password]);
+
     const handleLogin= async()=>{
          try {
             const res= await axios.post(BaseUrl + "/login",{
@@ -53,14 +62,13 @@ const Login = () => {
         }
     }
     
-    const handleGuestLogin = async () => {
+    const handleGuestLogin = () => {
         // Set guest credentials
         setEmail("dev@gmail.com");
         setPassword("Rgipt@123");
-    
-        // Wait for the state to update before calling handleLogin
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        handleLogin();
+
+        // Trigger guest login after state updates
+        setGuestLoginTriggered(true);
     };
 
 
