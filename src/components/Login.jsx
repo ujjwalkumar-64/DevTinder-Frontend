@@ -124,7 +124,7 @@ const Login = () => {
                                     setPassword("Rgipt@123");
                                     setTimeout(() => {
                                         handleLogin();
-                                    }, 0);
+                                    }, 1);
                                 }}
                             >
                                 Guest Login
