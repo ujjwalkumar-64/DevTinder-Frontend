@@ -67,7 +67,7 @@ const Connections = () => {
                 {firstName + " " + lastName}
               </h2>
               {age && gender && <p className="text-gray-600"  style={{ userSelect: "none" }} >{age + ", " + gender}</p>}
-              <p className="text-gray-700 mt-1"  style={{ userSelect: "none" }}>{about}</p>
+              <p className="text-gray-550 mt-1"  style={{ userSelect: "none" }}>{about}</p>
               
 
             </div>

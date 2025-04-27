@@ -115,7 +115,19 @@ const Login = () => {
 
                     <p className='text-red-800 my-2 '>{error}</p>
                     <div className="card-actions justify-center m-2">
-                        <button className="btn btn-accent" onClick={isloggedIn? handleLogin :  handleSignup}>Submit</button>
+                        <button className="btn btn-accent ml-2" onClick={isloggedIn? handleLogin :  handleSignup}>Submit</button>
+                        {isloggedIn && (
+                            <button
+                                className="btn btn-secondary ml-2"
+                                onClick={() => {
+                                    setEmail("dev@gmail.com");
+                                    setPassword("Rgipt@123");
+                                    handleLogin();
+                                }}
+                            >
+                                Guest Login
+                            </button>
+                        )}
                     </div>
 
                     <p
@@ -126,6 +138,7 @@ const Login = () => {
                         ? "New User? Signup Here"
                         : "Existing User? Login Here"}
                     </p>
+                     
             </div>
         </div>
     </div>

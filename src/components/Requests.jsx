@@ -69,7 +69,7 @@ const Requests = () => {
                 {firstName + " " + lastName}
               </h2>
               {age && gender && <p className='text-gray-600'  style={{ userSelect: "none" }}>{age + ", " + gender}</p>}
-              <p className='text-gray-700 mt-1' style={{ userSelect: "none" }}>{about}</p>
+              <p className='text-gray-450 mt-1' style={{ userSelect: "none" }}>{about}</p>
             </div>
             <div className="flex justify-center ">
               <button
