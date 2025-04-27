@@ -53,6 +53,15 @@ const Login = () => {
         }
     }
     
+    const handleGuestLogin = async () => {
+        // Set guest credentials
+        setEmail("dev@gmail.com");
+        setPassword("Rgipt@123");
+    
+        // Wait for the state to update before calling handleLogin
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        handleLogin();
+    };
 
 
   return (
@@ -119,13 +128,7 @@ const Login = () => {
                         {isloggedIn && (
                             <button
                                 className="btn btn-secondary ml-2"
-                                onClick={() => {
-                                    setEmail("dev@gmail.com");
-                                    setPassword("Rgipt@123");
-                                    setTimeout(() => {
-                                        handleLogin();
-                                    }, 1);
-                                }}
+                                onClick={handleGuestLogin}
                             >
                                 Guest Login
                             </button>
