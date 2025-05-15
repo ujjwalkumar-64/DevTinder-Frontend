@@ -55,7 +55,7 @@ const Premium = () => {
 
   return (
     isUserPremium? (
-        "You are already a premium user"
+        <div className='text-center m-4 text-xl'>You are already a premium user</div>
     ) :
     
     <div className='m-10'>

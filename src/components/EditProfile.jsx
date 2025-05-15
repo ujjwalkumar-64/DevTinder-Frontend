@@ -13,6 +13,7 @@ const EditProfile = ({ user }) => {
     const [about, setAbout] = useState(user.about || "");
     const [photoUrl, setPhotoUrl] = useState(user.photoUrl||null);  
     const [age, setAge] = useState(user.age || "");
+    const [githubUsername, setGithubUsername] = useState(user.githubUsername || "");
     const [error, setError] = useState("");
 
     const [toast, setToast] = useState(false);
@@ -28,7 +29,6 @@ const EditProfile = ({ user }) => {
     const handleUpdate = async () => {
         setError("");
         try {
-            console.log("Selected photoUrl:", photoUrl);
 
             const formData = new FormData();
             formData.append('firstName', firstName);
@@ -37,6 +37,7 @@ const EditProfile = ({ user }) => {
             formData.append('gender', gender);
             formData.append('about', about);
             formData.append('age', age);
+            formData.append("githubUsername",githubUsername)
 
              
             if (photoUrl) {
@@ -90,6 +91,18 @@ const EditProfile = ({ user }) => {
                                 <input
                                     type="text"
                                     value={lastName}
+                                    placeholder="Type here"
+                                    className="input input-bordered input-accent w-full"
+                                    onChange={(e) => setLastName(e.target.value)}
+                                />
+                            </label>
+                            <label className="form-control w-full my-2">
+                                <div className="label">
+                                    <span className="label-text">Github Username</span>
+                                </div>
+                                <input
+                                    type="text"
+                                    value={githubUsername}
                                     placeholder="Type here"
                                     className="input input-bordered input-accent w-full"
                                     onChange={(e) => setLastName(e.target.value)}

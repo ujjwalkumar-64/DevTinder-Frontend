@@ -49,6 +49,7 @@ const Navbar = () => {
             <li><Link to={"/connection"}>Connection</Link></li>
             <li><Link to={"/request"}>Request</Link></li>
             <li><Link to={"/premium"}>Premium</Link></li>
+            <li><Link to={"/call-history"}>Call History</Link></li>
             <li><Link to={"/password/reset"}>Reset Password</Link></li>
             <li><a onClick={handleLogout}>Logout</a></li>
           </ul>

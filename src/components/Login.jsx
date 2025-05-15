@@ -10,6 +10,7 @@ const Login = () => {
     const [password,setPassword] = useState("")
     const [firstName,setFirstName]= useState("")
     const [lastName,setLastName]= useState("")
+    const [githubUsername,setGithubUsername]= useState("")
     const [guestLoginTriggered, setGuestLoginTriggered] = useState(false);
 
     const isloggedIn = location.pathname === "/login";
@@ -50,7 +51,8 @@ const Login = () => {
                 email,
                 firstName,
                 lastName,
-                password,    
+                password,
+                githubUsername  
             },{
                 withCredentials:true
             })
@@ -102,6 +104,17 @@ const Login = () => {
                             placeholder="Type here" 
                             className="input input-bordered input-accent w-full max-w-xs"
                             onChange={(e)=> setLastName(e.target.value)}
+                            />
+                    </label>
+                    <label className="form-control   my-2">
+                        <div className="label">
+                            <span className="label-text">Github Username</span>
+                        </div>
+                        <input type="text" 
+                            value={githubUsername } 
+                            placeholder="Type here" 
+                            className="input input-bordered input-accent w-full max-w-xs"
+                            onChange={(e)=> setGithubUsername(e.target.value)}
                             />
                     </label>
 
