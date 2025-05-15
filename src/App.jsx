@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes,Route } from "react-router-dom"
-import {  Body,Login, Feed, Profile, Connections, Requests, ResetPassword} from "./components"
+import {  Body,Login, Feed, Profile, Connections, Requests, ResetPassword,Chat, CallHistory, VideoCall} from "./components"
 import { Provider } from "react-redux"
 import appStore from "./utils/appStore"
 import Premium from "./components/Premium"
-import Chat from "./components/Chat"
  
 function App() {
 
@@ -23,6 +22,8 @@ function App() {
                   <Route path="/password/reset" element={<ResetPassword/>}/>
                   <Route path="/premium" element={<Premium/>}/>
                   <Route path="/chat/:targetUserId" element={<Chat/>}/>
+                  <Route path="/call/:targetUserId" element={<VideoCall />} />
+                  <Route path="/call-history" element={<CallHistory />} />
                 </Route>
               </Routes>
 

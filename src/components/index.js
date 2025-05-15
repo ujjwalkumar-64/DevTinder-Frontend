@@ -9,6 +9,10 @@ import EditProfile from "./EditProfile";
 import Connections from "./Connections";
 import Requests from "./Requests";
 import ResetPassword from "./ResetPassword";
+import Chat from "./Chat";
+import CallHistory from "./CallHistory";
+import VideoCall from "./VideoCall";
+
 export{
     Navbar,
     Body,
@@ -20,5 +24,9 @@ export{
     EditProfile,
     Connections,
     Requests,
-    ResetPassword
+    ResetPassword,
+    Chat,
+    VideoCall,
+    CallHistory
+    
 }
