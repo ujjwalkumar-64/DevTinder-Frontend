@@ -76,9 +76,9 @@ const Login = () => {
 
   return (
     <div className='my-10 flex justify-center'>
-        <div className="card bg-base-300 sm:w-96 shadow-xl">
+        <div className="card bg-blue-100 sm:w-96 shadow-xl">
             <div className="card-body">
-                <h2 className="card-title justify-center text-xl">{isloggedIn?"Login Page":"Signup Page"}</h2>
+                <h2 className="card-title text-cyan-950 justify-center text-xl">{isloggedIn?"Login Page":"Signup Page"}</h2>
 
                 {
                     !isloggedIn && 
@@ -86,34 +86,34 @@ const Login = () => {
 
                     <label className="form-control    my-2">
                         <div className="label">
-                            <span className="label-text">First Name</span>
+                            <span className="label-text text-cyan-800">First Name</span>
                         </div>
                         <input type="text" 
                             value={firstName} 
                             placeholder="Type here" 
-                            className="input input-bordered input-accent w-full max-w-xs"
+                            className="input input-bordered input-accent w-full max-w-xs bg-cyan-50 text-cyan-700"
                             onChange={(e)=> setFirstName(e.target.value)}
                             />
                     </label>
                     <label className="form-control   my-2">
                         <div className="label">
-                            <span className="label-text">Last Name</span>
+                            <span className="label-text text-cyan-800">Last Name</span>
                         </div>
                         <input type="text" 
                             value={lastName} 
                             placeholder="Type here" 
-                            className="input input-bordered input-accent w-full max-w-xs"
+                            className="input input-bordered input-accent w-full max-w-xs bg-cyan-50 text-cyan-700"
                             onChange={(e)=> setLastName(e.target.value)}
                             />
                     </label>
                     <label className="form-control   my-2">
                         <div className="label">
-                            <span className="label-text">Github Username</span>
+                            <span className="label-text text-cyan-800">Github Username</span>
                         </div>
                         <input type="text" 
                             value={githubUsername } 
-                            placeholder="Type here" 
-                            className="input input-bordered input-accent w-full max-w-xs"
+                            placeholder="Type here text-cyan-800" 
+                            className="input input-bordered input-accent w-full max-w-xs text-cyan-700 bg-cyan-50"
                             onChange={(e)=> setGithubUsername(e.target.value)}
                             />
                     </label>
@@ -123,23 +123,23 @@ const Login = () => {
 
                 <label className="form-control   my-2">
                     <div className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-cyan-800">Email</span>
                     </div>
                     <input type="email" 
                         value={email} 
                         placeholder="Type here" 
-                        className="input input-bordered input-accent w-full max-w-xs"
+                        className="input input-bordered input-accent w-full max-w-xs text-cyan-700 bg-cyan-50"
                         onChange={(e)=> setEmail(e.target.value)}
                         />
                 </label>
                 <label className="form-control   my-2">
                     <div className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-cyan-800">Password</span>
                     </div>
                     <input type="password" 
                     value={password}
                     placeholder="Type here" 
-                    className="input input-bordered input-accent w-full max-w-xs" 
+                    className="input input-bordered input-accent w-full max-w-xs text-cyan-700 bg-cyan-50" 
                     onChange={(e)=>setPassword(e.target.value)}/>
                 </label>
 
@@ -157,7 +157,7 @@ const Login = () => {
                     </div>
 
                     <p
-                        className="text-center cursor-pointer py-2"
+                        className="text-center cursor-pointer py-2 text-slate-700"
                         onClick={() => navigate(isloggedIn ? "/signup" : "/login")}
                     >
                         {isloggedIn

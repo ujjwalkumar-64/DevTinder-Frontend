@@ -218,7 +218,7 @@ const VideoCall = () => {
   const localVideoHeight = "h-20 sm:h-28 md:h-32"; // 80px, 112px, 128px
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 to-indigo-900 px-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-cyan-50 to-cyan-900 px-2">
       <div
         className="relative w-full max-w-3xl aspect-video bg-slate-800 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden"
         ref={containerRef}

@@ -23,15 +23,15 @@ const Navbar = () => {
   }
    
   return (
-    <div className="navbar bg-base-300 flex flex-wrap md:flex-nowrap">
+    <div className="navbar bg-blue-50 flex flex-wrap md:flex-nowrap">
     <div className="flex-1">
-      <Link to={user?"/":"/login"} className="btn btn-ghost text-xl">DevTinder</Link>
+      <Link to={user?"/":"/login"} className="btn text-cyan-950 btn-ghost text-xl md:text-2xl">DevTinder</Link>
     </div>
     {user && <div className="flex-none gap-2 mt-2 md:mt-0">
-      <span className="hidden md:inline">Welcome, {user.firstName}</span>
+      <span className="hidden md:inline text-cyan-950 text-xl">Welcome, {user.firstName}</span>
         <div className="dropdown dropdown-end mx-5 flex">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-            <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
+            <div className="ring-primary ring-offset-cyan-100 w-10 rounded-full ring ring-offset-2">
               <img
                 alt="user photo"
                 src={user?.photoUrl} />
@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-12 w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content bg-blue-50 text-cyan-950 rounded-box z-[1] mt-12 w-52 p-2 shadow">
             <li>
               <Link to="/profile" className="justify-between" >
                 Profile

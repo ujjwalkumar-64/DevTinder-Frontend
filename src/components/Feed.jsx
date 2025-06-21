@@ -34,7 +34,7 @@ useEffect(()=>{
 if (!feed) return <h1 className="flex justify-center items-center my-10 text-lg text-gray-600">Loading...</h1>;
 
 if (feed.length <= 0)
-  return <h1 className="flex justify-center my-10">No new users founds!</h1>;
+  return <h1 className="flex justify-center my-10 text-cyan-950 text-xl md:text-3xl">No new users founds!</h1>;
 
   return (
    feed && (<div className='flex justify-center my-10'>

@@ -37,30 +37,30 @@ const ResetPassword = () => {
   return (
     <>
             <div className='my-10 flex justify-center'>
-        <div className="card bg-base-300 sm:w-96 shadow-xl">
+        <div className="card bg-blue-100 sm:w-96 shadow-xl">
             <div className="card-body">
                 
-            <h2 className="card-title justify-center text-xl">Password Reset</h2>  
+            <h2 className="card-title justify-center text-xl text-cyan-950">Password Reset</h2>  
 
                 <label className="form-control   my-2">
                     <div className="label">
-                        <span className="label-text">Old Password</span>
+                        <span className="label-text text-800 text-cyan-800">Old Password</span>
                     </div>
                     <input type="password" 
                     value={oldPassword}
                     placeholder="Type here" 
-                    className="input input-bordered input-accent w-full max-w-xs" 
+                    className="input input-bordered input-accent w-full max-w-xs bg-cyan-50 text-cyan-700" 
                     onChange={(e)=>setOldPassword(e.target.value)}/>
                 </label>
 
                 <label className="form-control   my-2">
                     <div className="label">
-                        <span className="label-text">New Password</span>
+                        <span className="label-text text-cyan-800">New Password</span>
                     </div>
                     <input type="password" 
                     value={newPassword}
                     placeholder="Type here" 
-                    className="input input-bordered input-accent w-full max-w-xs" 
+                    className="input input-bordered input-accent w-full max-w-xs bg-cyan-50 text-cyan-700" 
                     onChange={(e)=>setNewPassword(e.target.value)}/>
                 </label>
 

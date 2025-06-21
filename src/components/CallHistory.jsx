@@ -20,11 +20,11 @@ const CallHistory = () => {
 
     return (
         callHistory.length==0 ?(
-            <div className='text-center m-4 text-xl'>No call history found.</div>
+            <div className='text-center m-4 text-xl md:text-2xl text-cyan-950'>No call history found.</div>
         )
         :
         <div className="call-history-container">
-            <h1 className="text-2xl font-bold m-4 text-center">Call History</h1>
+            <h1 className="text-2xl font-bold m-4 text-center text-cyan-950">Call History</h1>
             <ul>
                 {callHistory.map((call) => (
                     <li key={call._id} className="call-item">

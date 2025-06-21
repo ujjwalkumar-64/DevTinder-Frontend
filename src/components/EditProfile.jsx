@@ -69,63 +69,63 @@ const EditProfile = ({ user }) => {
         <>
             <div className="flex flex-wrap justify-center gap-10 my-10 px-4 sm:px-8">
                 <div className="flex justify-center mx-10">
-                    <div className="card bg-base-300 w-full sm:w-96 shadow-xl">
+                    <div className="card bg-blue-100 w-full sm:w-96 shadow-xl">
                         <div className="card-body">
-                            <h2 className="card-title justify-center">Edit Profile</h2>
+                            <h2 className="card-title justify-center text-cyan-950">Edit Profile</h2>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">First Name</span>
+                                    <span className="label-text text-cyan-800">First Name</span>
                                 </div>
                                 <input
                                     type="text"
                                     value={firstName}
                                     placeholder="Type here"
-                                    className="input input-bordered input-accent w-full"
+                                    className="input input-bordered input-accent w-full bg-cyan-50"
                                     onChange={(e) => setFirstName(e.target.value)}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Last Name</span>
+                                    <span className="label-text text-cyan-800">Last Name</span>
                                 </div>
                                 <input
                                     type="text"
                                     value={lastName}
                                     placeholder="Type here"
-                                    className="input input-bordered input-accent w-full"
+                                    className="input input-bordered input-accent w-full bg-cyan-50"
                                     onChange={(e) => setLastName(e.target.value)}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Github Username</span>
+                                    <span className="label-text text-cyan-800">Github Username</span>
                                 </div>
                                 <input
                                     type="text"
                                     value={githubUsername}
                                     placeholder="Type here"
-                                    className="input input-bordered input-accent w-full"
+                                    className="input input-bordered input-accent w-full bg-cyan-50"
                                     onChange={(e) => setLastName(e.target.value)}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Age</span>
+                                    <span className="label-text text-cyan-800">Age</span>
                                 </div>
                                 <input
                                     type="number"
                                     value={age}
                                     placeholder="Type here"
-                                    className="input input-bordered input-accent w-full"
+                                    className="input input-bordered input-accent w-full bg-cyan-50"
                                     onChange={(e) => setAge(e.target.value)}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Gender</span>
+                                    <span className="label-text text-cyan-800">Gender</span>
                                 </div>
                                 <select
-                                    className="select select-accent w-full"
+                                    className="select select-accent w-full bg-cyan-50 text-cyan-800"
                                     value={gender}
                                     onChange={(e) => setGender(e.target.value)}
                                 >
@@ -137,32 +137,32 @@ const EditProfile = ({ user }) => {
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Photo</span>
+                                    <span className="label-text text-cyan-800">Photo</span>
                                 </div>
                                 <input
                                     type="file"
-                                    className="file-input file-input-bordered file-input-accent w-full"
+                                    className="file-input file-input-bordered file-input-accent w-full bg-cyan-50"
                                     onChange={handleFileChange}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">Skills</span>
+                                    <span className="label-text text-cyan-800">Skills</span>
                                 </div>
                                 <input
                                     type="text"
                                     value={skills?.join(", ")}
                                     placeholder="Type skills separated by commas"
-                                    className="input input-bordered input-accent w-full"
+                                    className="input input-bordered input-accent w-full bg-cyan-50"
                                     onChange={handleInputChange}
                                 />
                             </label>
                             <label className="form-control w-full my-2">
                                 <div className="label">
-                                    <span className="label-text">About</span>
+                                    <span className="label-text text-cyan-800">About</span>
                                 </div>
                                 <textarea
-                                    className="textarea textarea-accent"
+                                    className="textarea textarea-accent bg-cyan-50 text-cyan-800"
                                     value={about}
                                     placeholder="About yourself"
                                     onChange={(e) => setAbout(e.target.value)}

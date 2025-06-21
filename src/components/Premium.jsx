@@ -55,15 +55,15 @@ const Premium = () => {
 
   return (
     isUserPremium? (
-        <div className='text-center m-4 text-xl'>You are already a premium user</div>
+        <div className='text-center m-4 text-xl md:text-2xl text-cyan-950'>You are already a premium user</div>
     ) :
     
     <div className='m-10'>
       <div className="flex w-full flex-col lg:flex-row">
-        <div className="card bg-base-300 rounded-box grid h-80 flex-grow place-items-center">
+        <div className="card bg-blue-100 rounded-box grid h-80 flex-grow place-items-center">
             
-          <h1 className='font font-bold text-3xl'>Silver Membership</h1>  
-          <ul>
+          <h1 className='font font-bold text-3xl text-cyan-950'>Silver Membership</h1>  
+          <ul className='text-cyan-900'>
             <li>- chat with other people</li>
             <li>- 100 connection request per day</li>
             <li>- Blue Tick</li>
@@ -79,11 +79,11 @@ const Premium = () => {
         </div>
         <div className="divider lg:divider-horizontal">OR</div>
 
-        <div className="card bg-base-300 rounded-box grid h-80 flex-grow place-items-center">
+        <div className="card bg-blue-100 rounded-box grid h-80 flex-grow place-items-center">
             
             
-        <h1 className='font font-bold text-3xl'>Gold Membership</h1>  
-          <ul>
+        <h1 className='font font-bold text-3xl text-cyan-950'>Gold Membership</h1>  
+          <ul className='text-cyan-900'>
             <li>- chat with other people</li>
             <li>- unlimited connection per day</li>
             <li>- Blue Tick</li>

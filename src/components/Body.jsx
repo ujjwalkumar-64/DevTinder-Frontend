@@ -33,7 +33,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className='bg-gradient-to-br from-slate-800 to-indigo-900'>
+    <div className='bg-gradient-to-br from-cyan-50 to-cyan-900'>
       <Navbar/>
         <main className='min-h-screen max-w-screen-2xl mx-auto '>
           <Outlet />

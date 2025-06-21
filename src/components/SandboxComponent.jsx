@@ -79,8 +79,8 @@ const SandboxCollaborative = () => {
 };
 
   return (
-    <div className="flex flex-col items-center bg-gray-100 min-h-screen py-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">
+    <div className="flex flex-col items-center bg-gradient-to-br from-cyan-50 to-cyan-900 min-h-screen py-8">
+      <h1 className="text-3xl font-bold mb-6 text-cyan-950">
         Collaborative Sandbox - Room: {roomId}
       </h1>
       <div
