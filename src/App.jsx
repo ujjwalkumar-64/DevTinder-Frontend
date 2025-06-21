@@ -25,7 +25,7 @@ function App() {
                   <Route path="/chat/:targetUserId" element={<Chat/>}/>
                   <Route path="/call/:targetUserId" element={<VideoCall />} />
                   <Route path="/call-history" element={<CallHistory />} />
-                  <Route path="/sandbox" element={<SandboxComponent />} />
+                  <Route path="/sandbox/:roomId" element={<SandboxComponent />} />
                 </Route>
               </Routes>
 
