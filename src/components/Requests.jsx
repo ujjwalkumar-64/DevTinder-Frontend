@@ -39,7 +39,7 @@ const Requests = () => {
     fetchRequests();
   },[])
 
-  if (!requests) return <h1 className="flex justify-center items-center my-10 text-gray-600">Loading...</h1>;
+  if (requests === null) return <h1 className="flex justify-center items-center my-10 text-gray-600">Loading...</h1>;
 
   if (requests.length === 0) return <h1 className="flex justify-center items-center my-10 text-gray-600"  style={{ userSelect: "none" }} > No Connection Request Found</h1>;
   
@@ -49,7 +49,7 @@ const Requests = () => {
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {requests.map((request) => {
         const { _id, firstName, lastName, photoUrl, age, gender, about } =
-          request.fromUserId;
+          request?.fromUserId;
 
         return (
           <div

@@ -50,6 +50,7 @@ const Connections = () => {
           connection;
 
         return (
+          <div>
           <div
             key={_id}
             className=" flex items-center bg-base-300 shadow-md rounded-lg p-4 w-full sm:w-4/5 lg:w-3/4 mx-auto"
@@ -71,8 +72,13 @@ const Connections = () => {
               
 
             </div>
-            <Link to={"/chat/"+ _id}><button className='btn btn-secondary'>Chat</button></Link>
-            <Link to={"/call/"+ _id}><button className='btn btn-secondary'>Video Call</button></Link>
+            
+          </div>
+          <div className='flex items-center bg-base-300 shadow-md rounded-lg p-4 w-full sm:w-4/5 lg:w-3/4 mx-auto'>
+              <Link to={"/chat/"+ _id}><button className='btn btn-secondary mx-2'>Chat</button></Link>
+            <Link to={"/call/"+ _id}><button className='btn btn-secondary mx-2'>Video Call</button></Link>
+            <Link to={"/sandbox/"+ _id}><button className='btn btn-secondary mx-2'>Code Collab</button></Link>
+            </div>
           </div>
         );
       })}

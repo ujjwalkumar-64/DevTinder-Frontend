@@ -3,6 +3,7 @@ import {  Body,Login, Feed, Profile, Connections, Requests, ResetPassword,Chat, 
 import { Provider } from "react-redux"
 import appStore from "./utils/appStore"
 import Premium from "./components/Premium"
+import SandboxComponent from "./components/SandboxComponent"
  
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/chat/:targetUserId" element={<Chat/>}/>
                   <Route path="/call/:targetUserId" element={<VideoCall />} />
                   <Route path="/call-history" element={<CallHistory />} />
+                  <Route path="/sandbox" element={<SandboxComponent />} />
                 </Route>
               </Routes>
 
